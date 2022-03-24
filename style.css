@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('img/banner-g67534f501_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inlay {
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 50000000000000;
+}
+
+.list-group{
+    position: relative;
+}
+
+
+.container {  
+    min-height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body{
+    border-top: 1px solid rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    
+}
+
+.card-body span{
+    padding-left: 5px;
+}
+
+.card{
+    width: 30rem;
+    position: relative;
+}
+
+.header {
+    background-color: transparent !important;
+    font-weight: bolder;
+}
+
+.container-fluid{
+    justify-content: center !important;
+}
+
+a {
+    font-size: 3rem !important;
+    color: #0d6efd !important;
+}
+
+.header {
+    height: 7vh !important;
+}
+
+.answer:hover{
+    background-color: rgba(0,0,0,0.10);
+    cursor: pointer;
+}
+
+.bg-success, .bg-danger{
+    color: white;
+}
+.__web-inspector-hide-shortcut__{
+    visibility: unset !important;
+}
+
+
+.endtext{
+    color: red;
+    font-size: large;
+    position: absolute;
+    top: 10%;
+    right: 25%;
+}
+
+.newgame {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+@media(max-width:800px){
+  .container{
+      margin-top: 5vh;
+      align-items: unset;
+      min-height: unset;
+  } 
+  
+  .header {
+      display: none;
+  }
+
+  .card img{
+      height: auto;
+      min-width: 230px;
+      
+  }
+
+  .container{
+      width: 90%;
+  }
+
+  .card-title {
+    text-align: center;
+}
+}
+
+@media(max-width:800px){
+    
+.endtext{
+    text-align: center;
+    top:0;
+    right: 0;
+    left: 5%;
+   
+}
+
+body {
+    height: 95vh;
+    align-items: flex-start;
+}
+
+
+.container {
+    width: 95vw;
+}
+
+.card-body{
+    padding: 0;
+    padding-top: 3px;
+    text-align: center;
+}
+}
+
+@media(max-width:400px){
+.card img {
+    height: 300px;
+}
+
+}

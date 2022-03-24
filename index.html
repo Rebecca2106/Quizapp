@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Quizapp</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="Daten.js"></script>
+  <script src="script.js"></script>
+  <script src="./confetti.js"></script>
+
+  <title>Quizapp</title>
 </head>
-<body>
-    
+
+<body onload="init()">
+  <div class="container">
+    <div class="card text-dark bg-light mb-3">
+      <img class="headerimg" id="header-img" src="img/cat-g4c864d6d5_640.jpg" class="card-img-top" alt="...">
+      <span id="end" class="endtext d-none">Du hast <b id="rightanswered"></b> von <b id="sumquestion"></b> <br>Fragen
+        richtig beantwortet!</span>
+      <div id="replay" class="newgame d-none">
+        <h2>Quiz beendet</h2>
+        <button onclick="newGame()" id=""" type=" button" class="btn btn-primary">Erneut Spielen</button>
+      </div>
+      <!-- <div id="progress" class="d-none">
+        <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+          aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+      </div> -->
+      <div id="progress-bar" class="progress">
+        <div id="progress_green" class="progress-bar bg-success" role="progressbar" style="width: 0%"  aria-valuemin="0" aria-valuemax="100"></div>
+        <div id="progress_red" class="progress-bar bg-danger" role="progressbar"style="width: 0%"  aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+
+
+      <div class="" id="bodyquestion">
+        <div class="card-body">
+          <h5 class="card-title" id="question">Card title</h5>
+        </div>
+        
+        <ul class="list-group">
+          <div class="inlay d-none" id="hide"></div>
+          <li class="list-group-item mb-2 answer" id="answer_1" onclick="answer('answer_1')">An active item</li>
+          <!--active zeigtt den besuchten tab an-->
+          <li class="list-group-item mb-2 answer" id="answer_2" onclick="answer('answer_2')">A second item</li>
+          <li class="list-group-item mb-2 answer" id="answer_3" onclick="answer('answer_3')">A third item</li>
+          <li class="list-group-item mb-2 answer" id="answer_4" onclick="answer('answer_4')">A fourth item</li>
+        </ul>
+        <div class="card-body">
+          <span><b id="current">1 </b>von <b id="amountquestions">5 </b> Fragen</span>
+          <button onclick="nextQuestion()" id="nextquestion" disabled type="button" class="btn btn-primary">Nächste
+            Frage</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul>
+
+  </ul>
 </body>
 </html>
