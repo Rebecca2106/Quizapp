@@ -120,8 +120,9 @@ function updateProgressBarright(counter_right) {
 
 function resetprogress(){
     counter_right=0;
+    counter_wrong=1;
     updateProgressBarright(counter_right);
-    document.getElementById('progress_red').style =`0`;
+    document.getElementById('progress_red').style =`width: ${counter_wrong} %;`;
     document.getElementById('progress_red').innerHTML ='';
 
 }
