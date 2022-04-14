@@ -31,14 +31,12 @@ function answer(place) {
         document.getElementById('hide').classList.remove('d-none');
         confetti.start();
         right++;
-        updateProgressBarright(right);
         AUDIO_SUCCESS.play();
         setTimeout(function () {
             confetti.stop();
         }, 2000);
     } else {
         AUDIO_FAIL.play();
-        updateProgressBarwrong();
         document.getElementById('hide').classList.remove('d-none')
         document.getElementById(place).classList.add('bg-danger');
         document.getElementById(rightanswer).classList.add('bg-success');
@@ -58,6 +56,8 @@ function nextQuestion() {
         document.getElementById('nextquestion').disabled = true
         resetButton();
     }
+    updateProgressBarright(right);
+    updateProgressBarwrong();
 }
 
 function gameIsOver() {
